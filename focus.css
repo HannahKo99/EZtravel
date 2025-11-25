@@ -2,7 +2,6 @@
   max-width: 1100px;
   width: 100%;
   margin: 50px auto;
-  padding: 10px;
   /* background-color: lightgray; */
 }
 
@@ -79,8 +78,8 @@
   color: #fff;
   font-size: 18px;
   padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
-/* 文字出不來? */
 
 .focus-right{
   display: flex;
