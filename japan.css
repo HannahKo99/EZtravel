@@ -16,6 +16,20 @@
   color: #222;
   font-size: 30px;
   font-weight: 700;
+  position: relative;
+}
+
+.japan-tours-header h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 18px 18px 0 0;
+  border-color: #11d073 transparent transparent;
+  z-index: -1;
 }
 
 .japan-tours-list{
@@ -30,12 +44,20 @@
   font-size: 18px;
   padding: 0 5px;
   line-height: 10px;
+  font-weight: 700;
 }
 
-.japan-tours-list li:active, .japan-tours-list li:hover{
+ .japan-tours-list li:hover{
+    color: #0c9251;
+    cursor: pointer;
+    text-decoration: none;
+ }
+
+.japan-tours-list li:active,
+.japan-tours-list li:target{
   color: #0c9251;
-  font-weight: 700;
-  text-decoration: underline;
+  text-decoration: underline solid 2px;
+  text-underline-offset: 10px;
   cursor: pointer;
 }
 
