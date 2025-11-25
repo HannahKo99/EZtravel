@@ -47,14 +47,14 @@
   font-weight: 700;
 }
 
- .japan-tours-list li:hover{
-    color: #0c9251;
-    cursor: pointer;
-    text-decoration: none;
- }
+.japan-tours-list li:hover{
+  color: #0c9251;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .japan-tours-list li:active,
-.japan-tours-list li:target{
+.is-clicks.is-active{
   color: #0c9251;
   text-decoration: underline solid 2px;
   text-underline-offset: 10px;
@@ -74,7 +74,6 @@
 .japan-tours-content.active {
   display: grid; /* 點擊或預設 active 顯示 */
   height: 400px;
-
 }
 
 .big-card,
