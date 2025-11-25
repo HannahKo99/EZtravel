@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焦點話題復刻</title>
+  <style>
+    /* 基本重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    article.focus-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .focus-header h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    /* 左右佈局 */
+    .focus-body {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ================= 左側區域 ================= */
+    .focus-left {
+      flex: 7;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 200px;
+      gap: 15px;
+    }
+
+    .focus-card-left {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .focus-card-left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .focus-card-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 10px;
+    }
+
+    .focus-card-info h3 {
+      font-size: 16px;
+    }
+
+    /* ================= 右側區域 ================= */
+    .focus-right {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .focus-right-card--long {
+      display: flex;
+      height: 80px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      text-decoration: none;
+      color: #000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .focus-right-card__img {
+      flex: 0 0 30%;
+      overflow: hidden;
+    }
+
+    .focus-right-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .focus-right-card__content {
+      flex: 1;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .focus-right-card__content h3 {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <article class="focus-section">
+    <section class="focus-header">
+      <h2>焦點話題</h2>
+    </section>
+
+    <section class="focus-body">
+      <!-- 左側區域 -->
+      <div class="focus-left">
+        <a href="#" class="focus-card-left">
+          <img src="https://image.cdn-eztravel.com.tw/NDshkgBqYoAkUKExWSZGiaNjbzeLaC-ol9fCSPzxNmQ/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC81NjB4ODIwLzU2MHg4MjBfMzU3LmpwZw.jpg" alt="">
+          <div class="focus-card-info">
+            <h3>357狂歡日 超狂折扣領▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-card-left">
+          <img src="https://image.cdn-eztravel.com.tw/JxkFo_252UeQ826InfksGTcLv-c-fT0xsBcQrlhBReo/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MjEwLzIzMHgyMTBfaG90c3ByaW5nMi5wbmc.png" alt="">
+          <div class="focus-card-info">
+            <h3>天冷泡湯去▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-card-left">
+          <img src="https://image.cdn-eztravel.com.tw/pWTEH_o8UE1gLieFdF777XdDjr09SZXon2q_5_d0IlI/g:ce/q:95/aHR0cHM6Ly9pbWcxLmNkbi1lenRyYXZlbC5jb20udHcvaW1hZ2VzLzAyMjBmMTIwMDBhZ2FmcWxtQUI4MF9DXzc5MF80NDRfUjVfUTcwLmpwZw.jpg" alt="">
+          <div class="focus-card-info">
+            <h3>新開幕飯店 搶鮮住▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-card-left">
+          <img src="https://image.cdn-eztravel.com.tw/93eQfbxbTzH_UXF4mxhrJ_YnMsK8NsaHorvf3n27Ykc/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MjEwLzIzMHgyMTBfMjAyMzEwMDJDLnBuZw.png" alt="">
+          <div class="focus-card-info">
+            <h3>日韓賞楓最前線▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-card-left">
+          <img src="https://image.cdn-eztravel.com.tw/CUp1RenGdqj4OvOXLo7PWIZLOpIvQEdwNAMwSw1Of0w/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvVklfMTM0MzI4NzIxNy5qcGc.jpg" alt="">
+          <div class="focus-card-info">
+            <h3>東南亞跟團 $11,999起▸</h3>
+          </div>
+        </a>
+      </div>
+
+      <!-- 右側區域 -->
+      <div class="focus-right">
+        <a href="#" class="focus-right-card--long">
+          <div class="focus-right-card__img">
+            <img src="https://image.cdn-eztravel.com.tw/hijnnUJQtKfu6-PjShKmmBaRuva0v7rGonNIbbJUqdg/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC8yNjZ4MjAwLzI2NngyMDBfdWdseXJhYmJpdF9saW5lLmpwZw.jpg" alt="">
+          </div>
+          <div class="focus-right-card__content">
+            <h3>【超萌聯名貼圖】免費下載▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-right-card--long">
+          <div class="focus-right-card__img">
+            <img src="https://image.cdn-eztravel.com.tw/0IQrFcwVYp1UvFFq7J-fF23FEW3vy7ENYFQ9EnI--LM/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC9hcHBuZXdzLzI0OHgxNzBfMjAyMjA1MjUuanBn.jpg" alt="">
+          </div>
+          <div class="focus-right-card__content">
+            <h3>【折扣碼專區】壽星領$6,000▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-right-card--long">
+          <div class="focus-right-card__img">
+            <img src="https://image.cdn-eztravel.com.tw/1V3E2JlawGKbi4-P3yOdDteov43NkM1whSqWOlh_fLo/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yNjZ4MjAwL3lqd2ludGVyXzI2NngyMDBuZXcuanBn.jpg" alt="">
+          </div>
+          <div class="focus-right-card__content">
+            <h3>【銀角零卡】無卡分期省$900▸</h3>
+          </div>
+        </a>
+
+        <a href="#" class="focus-right-card--long">
+          <div class="focus-right-card__img">
+            <img src="https://image.cdn-eztravel.com.tw/MrcYn7vhnVPpsBZ2iheyjCsLHGNXYdxxtrJEhd4TiVg/g:ce/q:95/aHR0cHM6Ly9ldmVudC5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2FwcC8yNjZ4MjAwLzI2NngyMDBfZmxpZ2h0XzA0MjYuanBn.jpg" alt="">
+          </div>
+          <div class="focus-right-card__content">
+            <h3>【機票5折起】週3最高折$800▸</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+  </article>
+</body>
+</html>

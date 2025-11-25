@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本跟團區復刻 - Tab切換測試</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: Arial, sans-serif; background:#f5f5f5; }
+
+  .article {
+    max-width: 1100px;
+    margin: 30px auto;
+  }
+
+  /* 標題 + tabs */
+  .header { margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+  .header h2 { font-size: 28px; color:#222; }
+  .tabs ul { display: flex; gap: 10px; list-style:none; }
+  .tabs li { cursor: pointer; padding: 5px 12px; border-radius: 5px; background:#eee; transition:0.3s; }
+  .tabs li.active { background:#22aa55; color:#fff; font-weight: bold; }
+
+  /* 卡片區 grid */
+  .cards { display: grid; grid-template-columns: 3fr 1fr; gap: 10px; }
+
+  /* 左側大卡 */
+  .overlay-card-first {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .overlay-card-first img {
+    width: 100%;
+    display: block;
+  }
+  .overlay-card-first .shadow_bg {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    color:#fff;
+    padding: 10px;
+  }
+
+  /* 右側小卡 */
+  .overlay-card-rest-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .overlay-card-rest {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 70px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .overlay-card-rest img {
+    width: 100%;
+    display: block;
+  }
+  .overlay-card-rest .shadow_bg {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    color:#fff;
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+
+  /* hover 效果 */
+  .overlay-card-first:hover .shadow_bg,
+  .overlay-card-rest:hover .shadow_bg {
+    background: rgba(34,170,85,0.8);
+    transition: 0.3s;
+  }
+
+  /* tab 內容隱藏 */
+  .tab-content { display: none; }
+  .tab-content.active { display: grid; }
+
+</style>
+</head>
+<body>
+
+<article class="article">
+
+  <!-- 標題 + tabs -->
+  <div class="header">
+    <h2>日本跟團</h2>
+    <div class="tabs">
+      <ul>
+        <li class="active" data-tab="0">精選推薦</li>
+        <li data-tab="1">北陸</li>
+        <li data-tab="2">北海道</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 卡片區 -->
+  <!-- Tab 0 -->
+  <div class="cards tab-content active" data-tab="0">
+    <div class="overlay-card-first">
+      <a href="#"><img src="https://image.cdn-eztravel.com.tw/7RgK8jpUn8XNTc-zxYTS25sIN4RbM9-HISfjD8fpxmM/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvbmV3eWVhcmV2ZV83Njh4NDAwLmpwZw.jpg" alt="精選推薦1">
+        <div class="shadow_bg">精選推薦1<br>價格 16,999起</div>
+      </a>
+    </div>
+    <div class="overlay-card-rest-container">
+      <div class="overlay-card-rest">
+        <a href="#"><img src="https://image.cdn-eztravel.com.tw/BRs8xyrNExyKnYt4FZs5rwnyiiPR2v-209TkTdTcpRM/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvSlBfMjM3OTM1ODA2LmpwZw.jpg" alt="精選推薦2">
+          <div class="shadow_bg">精選推薦2<br>價格 19,700起</div>
+        </a>
+      </div>
+      <div class="overlay-card-rest">
+        <a href="#"><img src="https://image.cdn-eztravel.com.tw/XTM8AZ2NBps9t0CmskaEqdAf3i3FN1zniJ3c3fJQ3S0/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvQ05ZXzE4Mzc3MDQxMTguanBn.jpg" alt="精選推薦3">
+          <div class="shadow_bg">精選推薦3<br>價格 32,700起</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 1 -->
+  <div class="cards tab-content" data-tab="1">
+    <div class="overlay-card-first">
+      <a href="#"><img src="https://image.cdn-eztravel.com.tw/93eQfbxbTzH_UXF4mxhrJ_YnMsK8NsaHorvf3n27Ykc/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2hwaW1nL2hwL2Jhbm5lci8yMzB4MjEwLzIzMHgyMTBfaG90c3ByaW5nMi5wbmc.png" alt="北陸1">
+        <div class="shadow_bg">北陸1<br>價格 12,800起</div>
+      </a>
+    </div>
+    <div class="overlay-card-rest-container">
+      <div class="overlay-card-rest">
+        <a href="#"><img src="https://image.cdn-eztravel.com.tw/pWTEH_o8UE1gLieFdF777XdDjr09SZXon2q_5_d0IlI/g:ce/q:95/aHR0cHM6Ly9pbWcxLmNkbi1lenRyYXZlbC5jb20udHcvaW1hZ2VzLzAyMjBmMTIwMDBhZ2FmcWxtQUI4MF9DXzc5MF80NDRfUjVfUTcwLmpwZw.jpg" alt="北陸2">
+          <div class="shadow_bg">北陸2<br>價格 14,500起</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 2 -->
+  <div class="cards tab-content" data-tab="2">
+    <div class="overlay-card-first">
+      <a href="#"><img src="https://image.cdn-eztravel.com.tw/CUp1RenGdqj4OvOXLo7PWIZLOpIvQEdwNAMwSw1Of0w/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvVklfMTM0MzI4NzIxNy5qcGc.jpg" alt="北海道1">
+        <div class="shadow_bg">北海道1<br>價格 18,900起</div>
+      </a>
+    </div>
+    <div class="overlay-card-rest-container">
+      <div class="overlay-card-rest">
+        <a href="#"><img src="https://image.cdn-eztravel.com.tw/GYKsrdZrCUD2aUvFhFOTLpvx34jsjZaFkvbA6hcfGXM/rs:fit:1000:600:1/g:ce/q:95/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvQVVfNTg5NjI2NTkzLmpwZw.jpg" alt="北海道2">
+          <div class="shadow_bg">北海道2<br>價格 13,888起</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+<script>
+  const tabs = document.querySelectorAll('.tabs li');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      // 切換 active class
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // 顯示對應 tab 內容
+      tabContents.forEach(content => {
+        content.classList.remove('active');
+        if(content.dataset.tab === target){
+          content.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
