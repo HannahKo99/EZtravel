@@ -2,7 +2,7 @@
   max-width: 1100px;
   width: 100%;
   margin: 50px auto;
-  background-color: lightgray;
+  /* background-color: lightgray; */
 }
 
 .japan-tours-header{
@@ -32,10 +32,11 @@
   line-height: 10px;
 }
 
-.japan-tours-list li:active{
+.japan-tours-list li:active, .japan-tours-list li:hover{
   color: #0c9251;
   font-weight: 700;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .japan-tours-content{
